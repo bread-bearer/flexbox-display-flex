@@ -97,41 +97,53 @@ textarea {
 
 
 html {
-  background-color: #8E8F92;
-  height: 100%;
+    background-color: #8E8F92;
+    height: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 1em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 1em;
+    font-size: 1.25em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 500;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-weight: 500;
 }
 
-.div-1, .div-2, .div-3 {
-  display: flex;
-  width: 30%;
-  padding: 0 0.6em;
-  margin: 0.2em 0;
-  justify-content: center;
-  align-items: center;
-  color: #1C1D20;
-  border-left: 1px #352927 solid;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  background-color: #8E8F92;
-  height: 300px;
+header {
+    font-size: 1.5em;
+}
+
+.div-1,
+.div-2,
+.div-3 {
+    display: flex;
+    width: 30%;
+    padding: 0 0.6em;
+    margin: 0 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    color: #1C1D20;
+    border-left: 1px #352927 solid;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    background-color: #8E8F92;
+    height: 300px;
 }
 
 .div-1 {
     border-left: none;
 }
+
+
 
 
 
@@ -202,8 +214,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -217,9 +231,9 @@ body {
    ========================================================================== */
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -230,11 +244,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
